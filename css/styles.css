@@ -659,38 +659,29 @@ header {
 }
 
 .data-slader{
-  display: block;
   position: relative;
-  width: 368px;
-  height: 294px;
-  margin: 0;
   overflow: hidden;
 }
 
 .info-slader{
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
+  color: var(--white-color);
+  overflow: visible;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-style: normal;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 28px;
   letter-spacing: 0.03em;
-  color: var(--white-color);
-  padding-left: 24px;
-  padding-right: 24px;
-  transform: translateY(-100%);
-  transition: 250ms ease-in-out;
-  -webkit-transition: 250ms ease-in-out;
-}
-
-.data-slader > .info-slader{
-  display: block;
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 0%;
+  padding: 63px 24px;
 }
 
 .link-card:hover > .data-slader .info-slader{
-  height: 100%;
-  padding-top: 63px;
+  transform: translateY(0%);
 }
